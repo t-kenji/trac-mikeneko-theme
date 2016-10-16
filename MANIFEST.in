@@ -1,0 +1,3 @@
+include COPYING
+graft nekotheme/templates
+graft nekotheme/htdocs
