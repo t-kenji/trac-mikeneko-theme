@@ -1,0 +1,84 @@
+/* override trac.css */
+html {
+  font-size: 14px;
+}
+body, th, tr {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+#search {
+  font-size: .85rem;
+}
+#search input {
+  font-size: .85rem;
+}
+.nav ul {
+  font-size: .85rem;
+}
+#mainnav {
+  font-size: .85rem;
+}
+#altlinks h3 {
+  font-size: .85rem;
+}
+#altlinks li {
+  font-size: .85rem;
+}
+#footer {
+  font-size: .85rem;
+}
+#prefs {
+  font-size: .85rem;
+}
+#prefs input, #prefs select {
+  font-size: .85rem;
+}
+#prefs fieldset legend {
+  font-size: .85rem;
+}
+table.listing th {
+  font-size: .85rem;
+}
+table.listing thead th {
+  font-size: .85rem;
+}
+
+/* override report.css */
+.report #trac-sort-order {
+  font-size: .85rem;
+}
+#query fieldset, #query fieldset input, #query fieldset select {
+  font-size: .85rem;
+}
+#query .option, #query .option input, #query .option select {
+  font-size: .85rem;
+}
+#filters th {
+  font-size: .85rem;
+}
+#filters td label {
+  font-size: .85rem;
+}
+.tickets tr.trac-columns th {
+  font-size: .85rem;
+}
+#batchmod_form fieldset select, .batchmod_property, .batchmod_label {
+  font-size: .85rem;
+}
+#batchmod_form th {
+  font-size: .85rem;
+}
+.batchmod_required {
+  font-size: .85rem;
+}
+.report #trac-sort-order {
+  font-size: .85rem;
+}
