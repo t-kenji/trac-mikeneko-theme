@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2016 t-kenji.
+# Copyright (C) 2018 t-kenji.
 # All rights reserved.
 #
 # This software is licensed as described in the file COPYING, which
@@ -11,7 +11,7 @@
 import os
 from setuptools import setup
 
-__version__ = '0.2'
+__version__ = '0.3'
 
 setup(
     name = 'TracMikenekoTheme',
@@ -35,11 +35,12 @@ setup(
             'htdocs/js/*.js',
             'htdocs/fonts/*.*',
             'htdocs/*.png',
-        ]},
+        ]
+    },
     install_requires = ['TracThemeEngine'],
     entry_points = {
         'trac.plugins': [
-            'nekotheme.theme = nekotheme.theme',
+            'nekotheme = nekotheme',
         ]
     },
 )

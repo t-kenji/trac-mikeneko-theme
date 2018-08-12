@@ -1,16 +1,4 @@
-<!--!  Copyright (C) 2006-2014 Edgewall Software
-
-  This software is licensed as described in the file COPYING, which
-  you should have received as part of this distribution. The terms
-  are also available at http://trac.edgewall.com/license.html.
-
-  This software consists of voluntary contributions made by many
-  individuals. For the exact contribution history, see the revision
-  history and logs, available at http://trac.edgewall.org/.
--->
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:xi="http://www.w3.org/2001/XInclude"
       xmlns:py="http://genshi.edgewall.org/"
@@ -19,7 +7,7 @@
 
   <head py:match="head" py:attrs="select('@*')">
   ${select('*|comment()|text()')}
-  <link rel="stylesheet" type="text/css" href="${href.chrome('nekotheme/css/mikeneko.css')}" />
+  <!-- <link rel="stylesheet" type="text/css" href="${href.chrome('nekotheme/css/mikeneko.css')}" /> -->
   <style type="text/css">
 
 #floatnav,
@@ -103,7 +91,7 @@
 }
 
   </style>
-  <script src="${href.chrome('nekotheme/js/mikeneko.js')}"></script>
+  <!-- <script src="${href.chrome('nekotheme/js/mikeneko.js')}"></script> -->
   </head>
 
   <div py:def="navigation(category, id_)" id="${id_}" class="nav">

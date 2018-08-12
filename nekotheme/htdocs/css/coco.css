@@ -1,0 +1,300 @@
+/* override trac.css */
+html {
+  font-size: 14px;
+}
+body {
+  margin: 0;
+}
+body, th, tr {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+#banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #083358;
+}
+.banner-left {
+  display: flex;
+  align-items: center;
+}
+.banner-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+#header h1 {
+  margin: 0 1em;
+  padding: 0;
+}
+#header h1 :link,
+#header h1 :link:hover,
+#header h1 :visited,
+#header h1 :visited:hover {
+  color: #fff;
+}
+
+#search {
+  display: flex;
+  margin: .5em 0;
+  font-size: .85rem;
+}
+#search input {
+  font-size: .85rem;
+}
+.metanav-user .nav {
+  display: flex;
+  position: relative;
+  padding: 0;
+}
+.metanav-user .toggle,
+.metanav-user :link,
+.metanav-user :visited,
+.metanav-user .nav form.trac-logout button {
+  border: none;
+  color: #eee;
+  transition: .2s;
+}
+.metanav-user .toggle {
+  display: block;
+  text-decoration: none;
+  line-height: 2.8em;
+  padding: .3em 1em;
+}
+.metanav-user .toggle:link:hover,
+.metanav-user .toggle:visited:hover {
+  background: #0f4471;
+}
+.metanav-user .toggle .trac-author-user {
+  color: #fff;
+}
+.metanav-user ul {
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+  background-color: #083358;
+}
+.metanav-user .nav form.trac-logout button {
+  background-color: #083358;
+}
+.metanav-user li {
+  display: list-item;
+  overflow: hidden;
+  border: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.metanav-user .nav form.trac-logout button {
+  text-align: left;
+  width: 100%;
+}
+.metanav-user:hover > div > ul > li {
+  overflow: visible;
+  height: 40px;
+}
+.metanav-user li :link,
+.metanav-user li :visited,
+.metanav-user .nav form.trac-logout button {
+  display: block;
+  text-decoration: none;
+  line-height: 2.8em;
+  padding: .3em 1em;
+}
+.metanav-user li :link:hover,
+.metanav-user li :visited:hover,
+.metanav-user .nav form.trac-logout button:hover {
+  background: #0f4471;
+}
+.metanav-user .nav form.trac-logout button:hover {
+  color: #eee;
+}
+.nav ul {
+  font-size: .85rem;
+}
+.container {
+  display: flex;
+  width: 100%;
+}
+.container.body-footer {
+  flex-direction: column;
+}
+.container.mainnav-contents {
+  flex-direction: column;
+}
+.mainnav-contents > .nav {
+  flex-shrink: 0;
+  background: #0f4471;
+  border: none;
+  border-bottom: 2px solid #fc3c3c;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  font-size: .85rem;
+}
+.mainnav-contents > .nav li {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .container.mainnav-contents {
+    flex-direction: row;
+  }
+  .mainnav-contents > .nav {
+    width: 9em;
+    min-height: calc(100vh - 95px);
+    border-bottom: 10px solid #fc3c3c;
+  }
+  .mainnav-contents > .nav ul {
+    position: fixed;
+    width: 9em;
+  }
+  .mainnav-contents > .nav li {
+    display: list-item;
+    background: transparent;
+  }
+}
+.mainnav-contents > .nav li :link,
+.mainnav-contents > .nav li :visited {
+  display: block;
+  border: none;
+  color: #eee;
+  transition: .2s;
+  box-shadow: none;
+  padding: .3em 1em;
+}
+@media screen and (min-width: 768px) {
+  .mainnav-contents > .nav li :link,
+  .mainnav-contents > .nav li :visited {
+    padding: .725em 1em;
+  }
+}
+.mainnav-contents > .nav li :link:hover,
+.mainnav-contents > .nav li :visited:hover {
+  background: #083358;
+  box-shadow: none;
+}
+.mainnav-contents > .nav li.active :link,
+.mainnav-contents > .nav li.active :visited {
+  background: #083358;
+  text-shadow: none;
+}
+#main {
+  flex-grow: 1;
+  overflow-x: auto;
+}
+#main > div {
+  padding: .5em 1em;
+  min-width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  #main {
+    border-top: 5px solid #0f4471;
+  }
+  #main > div {
+    border-top: 2px solid #fc3c3c;
+  }
+}
+.contents-header {
+  transition: .2s;
+}
+.contents-header.fixed {
+  position: fixed;
+  width: calc(100% - 2em);
+  top: 0;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  transition: .2s;
+}
+@media screen and (min-width: 768px) {
+  .contents-header.fixed {
+    width: calc(100% - 9em - 9px);
+  }
+}
+.contents-header.fixed + div {
+  padding-top: 2em;
+}
+#altlinks h3 {
+  font-size: .85rem;
+}
+#altlinks li {
+  font-size: .85rem;
+}
+#footer {
+  font-size: .85rem;
+}
+#prefs {
+  font-size: .85rem;
+}
+#prefs input, #prefs select {
+  font-size: .85rem;
+}
+#prefs fieldset legend {
+  font-size: .85rem;
+}
+table.listing th {
+  font-size: .85rem;
+}
+table.listing thead th {
+  font-size: .85rem;
+}
+
+/* override report.css */
+.report #trac-sort-order {
+  font-size: .85rem;
+}
+#query fieldset, #query fieldset input, #query fieldset select {
+  font-size: .85rem;
+}
+#query .option, #query .option input, #query .option select {
+  font-size: .85rem;
+}
+#filters th {
+  font-size: .85rem;
+}
+#filters td label {
+  font-size: .85rem;
+}
+.tickets tr.trac-columns th {
+  font-size: .85rem;
+}
+#batchmod_form fieldset select, .batchmod_property, .batchmod_label {
+  font-size: .85rem;
+}
+#batchmod_form th {
+  font-size: .85rem;
+}
+.batchmod_required {
+  font-size: .85rem;
+}
+.report #trac-sort-order {
+  font-size: .85rem;
+}
+#changelog div.change {
+  margin: 0 4em 0 0;
+}
+#changelog div.change.own {
+  background-color: #f6f6f6;
+  margin: 0 0 0 4em;
+  padding: 0 .3em;
+  border-radius: 3px;
+}
+
+/* override ticket.css */
+#content.ticket {
+  width: auto;
+  min-width: 36em;
+  max-width: 64em;
+}
