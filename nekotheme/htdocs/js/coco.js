@@ -1,9 +1,4 @@
 $(function () {
-  $("#changelog .trac-author-user").each(function () {
-    var comment = $(this).parent().parent();
-    comment.addClass("own");
-  });
-
   var shown_ctxtnav = false;
   $(window).scroll(function () {
     var scroll_top = $(this).scrollTop();

@@ -8,6 +8,7 @@
 #
 
 import os
+import itertools
 from pkg_resources import parse_version, resource_filename
 from inspect import getdoc
 
@@ -15,7 +16,8 @@ from trac import __version__ as trac_version
 from trac.core import *
 from trac.web.api import IRequestFilter
 from trac.web.chrome import ITemplateStreamFilter, ITemplateProvider
-from genshi.filters.transform import Transformer
+from genshi.builder import tag
+from genshi.filters.transform import Transformer, ENTER, START, ATTR
 
 from themeengine.api import ThemeBase, IThemeProvider
 
@@ -53,6 +55,21 @@ class TracMikenekoTheme(ThemeBase):
     # ITemplateStreamFilter methods
 
     def filter_stream(self, req, method, filename, stream, data):
+        if not req.path_info.startswith('/ticket'):
+            return stream
+
+        def _find_change(stream):
+            kind0, data0, pos0 = stream[0]
+
+            for kind, data, pos in stream:
+                if (kind is START) and (data[1].get('class', '') == 'trac-author-user'):
+                    return itertools.chain([(kind0,
+                                            (data0[0], data0[1] | [('class', 'change own')]),
+                                             pos0)], stream[1:])
+            return stream
+
+        xpath = '//div[@id="changelog"]/div[@class="change"]'
+        stream |= Transformer(xpath).filter(_find_change)
         return stream
 
     # ITemplateProvider methods
