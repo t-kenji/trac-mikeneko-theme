@@ -82,9 +82,6 @@ h3 {
   z-index: 100;
   background-color: #083358;
 }
-.metanav-user .nav form.trac-logout button {
-  background-color: #083358;
-}
 .metanav-user li {
   display: list-item;
   overflow: hidden;
@@ -93,10 +90,6 @@ h3 {
   margin: 0;
   padding: 0;
   text-align: left;
-}
-.metanav-user .nav form.trac-logout button {
-  text-align: left;
-  width: 100%;
 }
 .metanav-user:hover > div > ul > li {
   overflow: visible;
@@ -110,6 +103,11 @@ h3 {
   line-height: 2.8em;
   padding: .3em 1em;
 }
+.metanav-user .nav form.trac-logout button {
+  background-color: #083358;
+  text-align: left;
+  width: 100%;
+}
 .metanav-user li :link:hover,
 .metanav-user li :visited:hover,
 .metanav-user .nav form.trac-logout button:hover {
@@ -117,6 +115,9 @@ h3 {
 }
 .metanav-user .nav form.trac-logout button:hover {
   color: #eee;
+}
+.metanav-user .nav form.trac-logout button:focus {
+  outline: 0;
 }
 .nav ul {
   font-size: .85rem;
