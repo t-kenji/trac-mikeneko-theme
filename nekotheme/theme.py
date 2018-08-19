@@ -14,10 +14,9 @@ from inspect import getdoc
 
 from trac import __version__ as trac_version
 from trac.core import *
-from trac.web.api import IRequestFilter
 from trac.web.chrome import ITemplateStreamFilter, ITemplateProvider
 from genshi.builder import tag
-from genshi.filters.transform import Transformer, ENTER, START, ATTR
+from genshi.filters.transform import Transformer, START
 
 from themeengine.api import ThemeBase, IThemeProvider
 
@@ -60,15 +59,17 @@ class TracMikenekoTheme(ThemeBase):
 
         def _find_change(stream):
             kind0, data0, pos0 = stream[0]
+            class0 = data0[1].get('class', '')
 
             for kind, data, pos in stream:
                 if (kind is START) and (data[1].get('class', '') == 'trac-author-user'):
+                    self.env.log.info('data: {}'.format(data0))
                     return itertools.chain([(kind0,
-                                            (data0[0], data0[1] | [('class', 'change own')]),
+                                            (data0[0], data0[1] | [('class', class0 + ' own')]),
                                              pos0)], stream[1:])
             return stream
 
-        xpath = '//div[@id="changelog"]/div[@class="change"]'
+        xpath = '//div[@id="changelog"]/div'
         stream |= Transformer(xpath).filter(_find_change)
         return stream
 

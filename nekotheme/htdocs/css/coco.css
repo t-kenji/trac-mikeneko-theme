@@ -284,7 +284,7 @@ table.listing thead th {
 }
 #changelog div.change {
   margin: 0 4em 0 0;
-  padding: 0 .3em;
+  padding: 0 .3em .3em;
 }
 #changelog div.change.own {
   background-color: #f6f6f6;
@@ -297,6 +297,15 @@ table.listing thead th {
   width: auto;
   min-width: 36em;
   max-width: 64em;
+}
+#changelog .comment {
+  padding-bottom: .5em;
+}
+#changelog .comment p:last-child {
+  -webkit-margin-after: 0;
+}
+#changelog .trac-lastedit {
+  margin-top: .3em;
 }
 
 /* override TracAccountManager */
